@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="PresentAgent-2 Towards Generalist Multimodal Presentation Agents.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PresentAgent-2 Towards Generalist Multimodal Presentation Agents</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<body>
+  <div class="header-wrapper">
+      <div class="header-container" id="header-container">
+      <div class="header-content">
+        <h1 style="font-family: 'CookieRun', serif; font-size: 4rem; font-weight: bold; margin-bottom: 0.1rem;">
+          <span style="color: rgb(230, 100, 80);">P</span><span style="color: rgb(230, 183, 53);">r</span><span style="color: rgb(117, 160, 85);">e</span><span style="color: rgb(96, 120, 172);">s</span><span style="color: rgb(230, 100, 80);">e</span><span style="color: rgb(230, 183, 53);">n</span><span style="color: rgb(117, 160, 85);">t</span><span style="color: rgb(96, 120, 172);">A</span><span style="color: rgb(230, 100, 80);">g</span><span style="color: rgb(230, 183, 53);">e</span><span style="color: rgb(117, 160, 85);">n</span><span style="color: rgb(96, 120, 172);">t</span><span style="color: rgb(230, 100, 80);">-</span><span style="color: rgb(230, 183, 53);">2</span>
+        </h1>
+        <h1 class="title is-1 publication-title" style="font-weight: bold; margin-bottom: 0.5rem; color: rgb(35, 33, 30);">Towards Generalist Multimodal Presentation Agents</h1>        
+        <!-- <div class="responsive-header" style="font-family: 'Google Sans', sans-serif; font-weight: bold; font-size: 3rem; margin-bottom: 1rem;">
+            <h2>PresentAgent-2 Towards Generalist Multimodal Presentation Agents</h2>
+        </div>         -->
+        <!-- <h1 class="title is-1 publication-title" style="font-family: 'CookieRun', serif; font-size: 5rem; margin-top: 1rem;">PresentAgent-2 Towards Generalist Multimodal Presentation Agents</h1> -->
+        <!-- <h1 class="title is-1 publication-title" style="font-weight: bold;">PresentAgent-2 Towards Generalist Multimodal Presentation Agents</h1> -->
+        <div class="is-size-5 publication-authors" style="margin-bottom: 1rem;">
+          <span class="author-block" style="color: black; margin-right: 0.5rem;">Wei Wu<sup>1*</sup></span>
+          <span class="author-block" style="color: black; margin-right: 0.5rem;">Ziyang Xu<sup>1*</sup></span>
+          <span class="author-block" style="color: black; margin-right: 0.5rem;"><a href="https://steve-zeyu-zhang.github.io/" style="color: black;">Zeyu Zhang</a><sup>1*&dagger;</sup></span>
+          <span class="author-block" style="color: black; margin-right: 0.5rem;">Yang Zhao<sup>2</sup></span>
+          <span class="author-block" style="color: black;">Hao Tang<sup>1&ddagger;</sup></span>
+        </div>
+        <div class="is-size-5 publication-authors" style="margin-bottom: 1rem;">
+          <span class="author-block" style="color: black; margin-right: 0.5rem;"><sup>1</sup>Peking University</span>
+          <span class="author-block" style="color: black;"><sup>2</sup>La Trobe University</span>
+        </div>
+        <div class="is-size-6 publication-authors" style="margin-bottom: 1rem;">
+          <span class="author-block" style="color: black; margin-right: 0.5rem;"><sup>*</sup>Equal contribution.</span>
+          <span class="author-block" style="color: black; margin-right: 0.5rem;"><sup>&dagger;</sup>Project lead.</span>
+          <span class="author-block" style="color: black;"><sup>&ddagger;</sup>Corresponding author.</span>
+        </div>
+        <div class="publication-links" style="margin-bottom: -1rem;">
+          <!-- PDF Link. -->
+          <span class="link-block">
+            <a href="https://arxiv.org/pdf/"
+                class="external-link button is-normal is-dark">
+              <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+              </span>
+              <span>Paper</span>
+            </a>
+          </span>
+          <!-- Code Link. -->
+          <span class="link-block">
+            <a href="https://github.com/AIGeeksGroup/PresentAgent-2"
+                class="external-link button is-normal is-dark">
+              <span class="icon">
+                  <i class="fab fa-github"></i>
+              </span>
+              <span>Code</span>
+              </a>
+          </span>
+        </div>                 
+      </div> 
+      <div class="header-video">
+          <video id="shiba" controls loop playsinline height="100%" draggable="false">
+            <source src="./static/video/teaser.mp4" type="video/mp4">
+          </video>      
+          <p style="margin-top: 0.75rem; color: rgb(35, 33, 30); font-size: 1rem; text-align: left; font-style: italic;">
+            The video was generated entirely by PresentAgent-2 <b>without</b> any manual curation.
+          </p>
+          <!-- <video draggable="false" src="static/video/tiger_720_30.mp4"> -->
+      </div>            
+    </div>  
+  </div>
+
+
+
+
+
+
+<section class="section">
+  <div class="container" style="max-width: 1480px;">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Single Presentation</h2>
+        <div class="columns is-variable is-1 is-multiline">
+          <div class="column is-one-fifth-desktop is-half-tablet">
+            <video class="single-video" controls playsinline width="100%">
+              <source src="./static/video/Single/3DInAction/output.mp4" type="video/mp4">
+            </video>
+            <div class="single-slides" data-pptx="./static/video/Single/3DInAction/final_single_presentation.pptx" style="display: none;"></div>
+            <div class="has-text-centered" style="font-size: 1rem; margin-top: 0.12rem;">
+              <span>3DInAction</span>
+              <button class="button is-small is-light single-toggle" type="button" style="margin-left: 0.35rem;">Show Slides</button>
+            </div>
+          </div>
+          <div class="column is-one-fifth-desktop is-half-tablet">
+            <video class="single-video" controls playsinline width="100%">
+              <source src="./static/video/Single/AutoSDF/output.mp4" type="video/mp4">
+            </video>
+            <div class="single-slides" data-pptx="./static/video/Single/AutoSDF/final_single_presentation.pptx" style="display: none;"></div>
+            <div class="has-text-centered" style="font-size: 1rem; margin-top: 0.12rem;">
+              <span>AutoSDF</span>
+              <button class="button is-small is-light single-toggle" type="button" style="margin-left: 0.35rem;">Show Slides</button>
+            </div>
+          </div>
+          <div class="column is-one-fifth-desktop is-half-tablet">
+            <video class="single-video" controls playsinline width="100%">
+              <source src="./static/video/Single/BANMo_Building_Animatable_3D_Neural_Models_from_Many_Casual_Videos/output.mp4" type="video/mp4">
+            </video>
+            <div class="single-slides" data-pptx="./static/video/Single/BANMo_Building_Animatable_3D_Neural_Models_from_Many_Casual_Videos/final_single_presentation.pptx" style="display: none;"></div>
+            <div class="has-text-centered" style="font-size: 1rem; margin-top: 0.12rem;">
+              <span>BANMo</span>
+              <button class="button is-small is-light single-toggle" type="button" style="margin-left: 0.35rem;">Show Slides</button>
+            </div>
+          </div>
+          <div class="column is-one-fifth-desktop is-half-tablet">
+            <video class="single-video" controls playsinline width="100%">
+              <source src="./static/video/Single/Dual_Shutter_Optical_Vibration_Sensing/output.mp4" type="video/mp4">
+            </video>
+            <div class="single-slides" data-pptx="./static/video/Single/Dual_Shutter_Optical_Vibration_Sensing/final_single_presentation.pptx" style="display: none;"></div>
+            <div class="has-text-centered" style="font-size: 1rem; margin-top: 0.12rem;">
+              <span>Dual Shutter</span>
+              <button class="button is-small is-light single-toggle" type="button" style="margin-left: 0.35rem;">Show Slides</button>
+            </div>
+          </div>
+          <div class="column is-one-fifth-desktop is-half-tablet">
+            <video class="single-video" controls playsinline width="100%">
+              <source src="./static/video/Single/FastForward/output.mp4" type="video/mp4">
+            </video>
+            <div class="single-slides" data-pptx="./static/video/Single/FastForward/final_single_presentation.pptx" style="display: none;"></div>
+            <div class="has-text-centered" style="font-size: 1rem; margin-top: 0.12rem;">
+              <span>FastForward</span>
+              <button class="button is-small is-light single-toggle" type="button" style="margin-left: 0.35rem;">Show Slides</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.single-toggle').forEach((button) => {
+    button.addEventListener('click', () => {
+      const card = button.closest('.column');
+      const video = card.querySelector('.single-video');
+      const slides = card.querySelector('.single-slides');
+      const showingSlides = slides.style.display !== 'none';
+
+      if (showingSlides) {
+        slides.style.display = 'none';
+        video.style.display = 'block';
+        button.textContent = 'Show Slides';
+      } else {
+        video.pause();
+        if (!slides.dataset.rendered) {
+          const pptxUrl = new URL(slides.dataset.pptx, window.location.href).href;
+          const officeUrl = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(pptxUrl)}`;
+          slides.innerHTML = `<iframe src="${officeUrl}" width="100%" height="220" frameborder="0"></iframe>`;
+          slides.dataset.rendered = 'true';
+        }
+        video.style.display = 'none';
+        slides.style.display = 'block';
+        button.textContent = 'Show Video';
+      }
+    });
+  });
+</script>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container content" style="max-width: 1440px;">
+    <h2 class="title">BibTeX</h2>
+      <pre><code style="font-size: 1.25em;">
+@article{wu2025presentagent2,
+  title={PresentAgent-2 Towards Generalist Multimodal Presentation Agents},
+  author={Wu, Wei and Xu, Ziyang and Zhang, Zeyu and Zhao, Yang and Tang, Hao},
+  journal={Tech Report},
+  year={2026},
+}</code></pre>
+  </div>
+</section>
+<footer class="footer" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p style="margin-bottom: 0;">
+            PresentAgent-2 Towards Generalist Multimodal Presentation Agents
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
