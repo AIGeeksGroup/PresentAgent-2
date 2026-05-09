@@ -351,7 +351,16 @@ body {
 
   .teaser-video {
     width: 100%; /* Set width to 100% */
-    margin-bottom: 2em;
+    margin-bottom: 0;
+  }
+
+  .teaser-media {
+    width: 100%;
+  }
+
+  .teaser-slides iframe {
+    display: block;
+    width: 100%;
   }
 
   .header-image {
@@ -363,10 +372,11 @@ body {
   }
   .header-video {
     max-width: calc(50% - 20px); /* Adjust width to include margin */
+    margin-top: 1.5rem;
   }
 
   .header-video video {
-    max-width: 90%; /* Video should be responsive within the container */
+    max-width: 100%; /* Video should be responsive within the container */
     height: auto; /* Maintain the aspect ratio */
   }  
 

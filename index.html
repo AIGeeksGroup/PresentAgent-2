@@ -49,7 +49,12 @@
         <h1 style="font-family: 'CookieRun', serif; font-size: 4rem; font-weight: bold; margin-bottom: 0.1rem;">
           <span style="color: rgb(230, 100, 80);">P</span><span style="color: rgb(230, 183, 53);">r</span><span style="color: rgb(117, 160, 85);">e</span><span style="color: rgb(96, 120, 172);">s</span><span style="color: rgb(230, 100, 80);">e</span><span style="color: rgb(230, 183, 53);">n</span><span style="color: rgb(117, 160, 85);">t</span><span style="color: rgb(96, 120, 172);">A</span><span style="color: rgb(230, 100, 80);">g</span><span style="color: rgb(230, 183, 53);">e</span><span style="color: rgb(117, 160, 85);">n</span><span style="color: rgb(96, 120, 172);">t</span><span style="color: rgb(230, 100, 80);">-</span><span style="color: rgb(230, 183, 53);">2</span>
         </h1>
-        <h1 class="title is-1 publication-title" style="font-weight: bold; margin-bottom: 0.5rem; color: rgb(35, 33, 30);">Towards Generalist Multimodal Presentation Agents</h1>        
+        <h1 class="title is-1 publication-title" style="font-weight: bold; margin-bottom: 0.5rem; color: rgb(35, 33, 30);">
+          Towards Generalist Multimodal Presentation Agents
+          <!-- <span style="display: inline-block; margin-left: 0.85rem; padding: 0.22rem 1.05rem; border-radius: 999px; background-color: #0b2f6b; color: white; font-size: 1.5rem; font-weight: 700; vertical-align: middle; white-space: nowrap;">
+            Paper 2026
+          </span> -->
+        </h1>        
         <!-- <div class="responsive-header" style="font-family: 'Google Sans', sans-serif; font-weight: bold; font-size: 3rem; margin-bottom: 1rem;">
             <h2>PresentAgent-2: Towards Generalist Multimodal Presentation Agents</h2>
         </div>         -->
@@ -105,12 +110,18 @@
         </div>                 
       </div> 
       <div class="header-video">
-          <video id="shiba" controls loop playsinline height="100%" draggable="false">
-            <source src="./static/video/teaser.mp4" type="video/mp4">
-          </video>      
+          <div class="teaser-media">
+            <video id="shiba" class="teaser-video" controls loop playsinline height="100%" draggable="false">
+              <source src="./static/video/teaser.mp4" type="video/mp4">
+            </video>
+            <div class="teaser-slides" data-pptx="./static/video/teaser.pptx" style="display: none;"></div>
+          </div>
           <p style="margin-top: 0.75rem; color: rgb(35, 33, 30); font-size: 1rem; text-align: left; font-style: italic;">
             The video was generated entirely by PresentAgent-2 <b>without</b> any manual curation.
           </p>
+          <div style="width: 100%; text-align: center; margin-top: 0.5rem;">
+            <button class="button is-small is-light teaser-toggle" type="button">Show Slides</button>
+          </div>
           <!-- <video draggable="false" src="static/video/tiger_720_30.mp4"> -->
       </div>            
     </div>  
@@ -673,7 +684,7 @@
             <td>△</td>
             <td>×</td>
             <td>×</td>
-            <td>✓</td>
+            <td>×</td>
           </tr>
           <tr>
             <td>VideoStudio</td>
@@ -683,7 +694,7 @@
             <td>△</td>
             <td>×</td>
             <td>×</td>
-            <td>✓</td>
+            <td>×</td>
           </tr>
           <tr>
             <td>LVD</td>
@@ -693,7 +704,7 @@
             <td>△</td>
             <td>×</td>
             <td>×</td>
-            <td>✓</td>
+            <td>×</td>
           </tr>
           <tr>
             <td>PresentAgent</td>
@@ -703,7 +714,7 @@
             <td>✓</td>
             <td>△</td>
             <td>×</td>
-            <td>✓</td>
+            <td>×</td>
           </tr>
           <tr style="background-color: #e8f3ff;">
             <td><b>PresentAgent-2</b></td>
@@ -739,6 +750,32 @@
           const pptxUrl = new URL(slides.dataset.pptx, window.location.href).href;
           const officeUrl = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(pptxUrl)}`;
           slides.innerHTML = `<iframe src="${officeUrl}" width="100%" height="220" frameborder="0"></iframe>`;
+          slides.dataset.rendered = 'true';
+        }
+        video.style.display = 'none';
+        slides.style.display = 'block';
+        button.textContent = 'Show Video';
+      }
+    });
+  });
+
+  document.querySelectorAll('.teaser-toggle').forEach((button) => {
+    button.addEventListener('click', () => {
+      const container = button.closest('.header-video');
+      const video = container.querySelector('.teaser-video');
+      const slides = container.querySelector('.teaser-slides');
+      const showingSlides = slides.style.display !== 'none';
+
+      if (showingSlides) {
+        slides.style.display = 'none';
+        video.style.display = 'block';
+        button.textContent = 'Show Slides';
+      } else {
+        video.pause();
+        if (!slides.dataset.rendered) {
+          const pptxUrl = new URL(slides.dataset.pptx, window.location.href).href;
+          const officeUrl = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(pptxUrl)}`;
+          slides.innerHTML = `<iframe src="${officeUrl}" width="100%" height="360" frameborder="0"></iframe>`;
           slides.dataset.rendered = 'true';
         }
         video.style.display = 'none';
