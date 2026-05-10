@@ -123,7 +123,7 @@ This script supports both:
 
 ```bash
 python scripts/run_url_to_video_pipeline.py \
-  --question "Please create a discussion-style presentation about PresentAgent-2, focusing on deep research, multimodal search, and the three presentation modes." \
+  --question "xxx" \
   --deepresearch-root /path/to/DeepResearch \
   --output-root /path/to/output/presentagent2_demo \
   --template-pptx /path/to/build_effective_agents.pptx \
@@ -138,7 +138,7 @@ python scripts/run_url_to_video_pipeline.py \
 
 ```bash
 python scripts/run_url_to_video_pipeline.py \
-  --url "https://aigeeksgroup.github.io/PresentAgent-2/" \
+  --url "xxx" \
   --output-root /path/to/output/presentagent2_from_url \
   --template-pptx /path/to/build_effective_agents.pptx \
   --notes-mode discussion \
