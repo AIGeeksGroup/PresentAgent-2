@@ -2,11 +2,12 @@
 This is the code repository for the paper:
 > **PresentAgent-2: Multimodal Agent for Query-to-Presentation Video Generation**
 >
-> [Author 1]\*, [Author 2]\*, [Author 3], [Author 4], [Author 5], [Author 6]<sup>#</sup>
+> Wei Wu\* , Ziyang Xu\* , Zeyu Zhang\*†, Yang Zhao, Hao Tang‡
 >
-> \*Equal contribution. <sup>#</sup>Corresponding author.
+> Peking University, La Trobe University
 >
-> ***NeurIPS 2026 [Placeholder]***
+> \*Equal contribution. †Project lead. ‡Corresponding author: bjdxtanghao@gmail.com.
+
 >
 > ### [Paper](<PAPER_URL_PLACEHOLDER>) | [Project Page](https://aigeeksgroup.github.io/PresentAgent-2/) | [Demo Video](<DEMO_VIDEO_URL_PLACEHOLDER>) | [Data](<DATA_URL_PLACEHOLDER>)
 
