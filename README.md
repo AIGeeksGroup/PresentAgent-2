@@ -72,11 +72,15 @@ The pretrained TTS checkpoints can be found at [Hugging Face](https://huggingfac
 **Requirements (for Linux)**
 
 ```sh
-# Set the root directory
-export PYTHONPATH="/path/to/PresentAgent-2/presentagent/MegaTTS3:$PYTHONPATH"
-
 # [Optional] Set GPU
 export CUDA_VISIBLE_DEVICES=0
+
+# Set Python path for PresentAgent-2
+export PYTHONPATH="/path/to/PresentAgent-2:/path/to/PresentAgent-2/presentagent/MegaTTS3:$PYTHONPATH"
+
+# Make sure ffmpeg and libreoffice/soffice are available in PATH
+which ffmpeg
+which libreoffice
 ```
 
 **Requirements (for Windows)**
@@ -84,15 +88,22 @@ export CUDA_VISIBLE_DEVICES=0
 conda install -y -c conda-forge pynini==2.1.5
 pip install WeTextProcessing==1.0.3
 
-# [Optional] Install GPU-specific PyTorch if needed.
+# [Optional] Install GPU-specific PyTorch if needed
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
 
-# [Optional] If ffmpeg is missing
-conda install -c conda-forge ffmpeg
+# Install ffmpeg if needed
+conda install -y -c conda-forge ffmpeg
 
-# Set environment variable for root directory
-set PYTHONPATH="C:\path\to\PresentAgent-2\presentagent\MegaTTS3;%PYTHONPATH%"
-$env:PYTHONPATH="C:\path\to\PresentAgent-2\presentagent\MegaTTS3;%PYTHONPATH%"
+# Make sure LibreOffice is installed for PPT-to-video conversion
+# and soffice is available in PATH, or set SOFFICE_CMD manually.
+
+# Set Python path for PresentAgent-2
+set PYTHONPATH="C:\path\to\PresentAgent-2;C:\path\to\PresentAgent-2\presentagent\MegaTTS3;%PYTHONPATH%"
+$env:PYTHONPATH="C:\path\to\PresentAgent-2;C:\path\to\PresentAgent-2\presentagent\MegaTTS3;%PYTHONPATH%"
+
+# [Optional] Set GPU
+set CUDA_VISIBLE_DEVICES=0
+$env:CUDA_VISIBLE_DEVICES=0
 ```
 
 ### 2. Run End-to-End Query-to-Video Pipeline
