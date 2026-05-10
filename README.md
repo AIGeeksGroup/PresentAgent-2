@@ -294,14 +294,82 @@ For Subjective Scoring, the mode-specific metrics are:
 
 ### ✳️ Comparative Study
 
-| Method | Model | Single Quiz | Single Mean | Discussion Quiz | Discussion Mean | Interaction Quiz | Interaction Mean |
-| :----: | :---: | :---------: | :---------: | :-------------: | :-------------: | :--------------: | :--------------: |
-| Human Reference | Human-created | 4.82 | 4.46 | 4.83 | 4.40 | -- | -- |
-| PresentAgent-2 | Qwen3.5-VL-Plus | 4.84 | 4.47 | 4.85 | 4.37 | 4.85 | 4.52 |
-| PresentAgent-2 | Claude Opus 4.7 | 4.80 | 4.43 | 4.82 | 4.38 | 4.80 | 4.52 |
-| PresentAgent-2 | Gemini 3.1 Pro | 4.78 | 4.35 | 4.80 | 4.25 | 4.75 | 4.45 |
-| PresentAgent-2 | GPT-5.5 | 4.83 | 4.25 | 4.77 | 4.17 | 4.75 | 4.46 |
-| PresentAgent-2 | GLM-4.7V | 4.75 | 4.18 | 4.67 | 4.11 | 4.60 | 4.42 |
+<table>
+<thead>
+<tr>
+<th nowrap>Method</th>
+<th nowrap>Model</th>
+<th nowrap>S-Quiz</th>
+<th nowrap>S-Mean</th>
+<th nowrap>D-Quiz</th>
+<th nowrap>D-Mean</th>
+<th nowrap>I-Quiz</th>
+<th nowrap>I-Mean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td nowrap>Human Reference</td>
+<td nowrap>Human-created</td>
+<td align="center">4.82</td>
+<td align="center">4.46</td>
+<td align="center">4.83</td>
+<td align="center">4.40</td>
+<td align="center">--</td>
+<td align="center">--</td>
+</tr>
+<tr>
+<td nowrap>PresentAgent&#8209;2</td>
+<td nowrap>Qwen3.5&#8209;VL&#8209;Plus</td>
+<td align="center">4.84</td>
+<td align="center">4.47</td>
+<td align="center">4.85</td>
+<td align="center">4.37</td>
+<td align="center">4.85</td>
+<td align="center">4.52</td>
+</tr>
+<tr>
+<td nowrap>PresentAgent&#8209;2</td>
+<td nowrap>Claude Opus 4.7</td>
+<td align="center">4.80</td>
+<td align="center">4.43</td>
+<td align="center">4.82</td>
+<td align="center">4.38</td>
+<td align="center">4.80</td>
+<td align="center">4.52</td>
+</tr>
+<tr>
+<td nowrap>PresentAgent&#8209;2</td>
+<td nowrap>Gemini 3.1 Pro</td>
+<td align="center">4.78</td>
+<td align="center">4.35</td>
+<td align="center">4.80</td>
+<td align="center">4.25</td>
+<td align="center">4.75</td>
+<td align="center">4.45</td>
+</tr>
+<tr>
+<td nowrap>PresentAgent&#8209;2</td>
+<td nowrap>GPT&#8209;5.5</td>
+<td align="center">4.83</td>
+<td align="center">4.25</td>
+<td align="center">4.77</td>
+<td align="center">4.17</td>
+<td align="center">4.75</td>
+<td align="center">4.46</td>
+</tr>
+<tr>
+<td nowrap>PresentAgent&#8209;2</td>
+<td nowrap>GLM&#8209;4.7V</td>
+<td align="center">4.75</td>
+<td align="center">4.18</td>
+<td align="center">4.67</td>
+<td align="center">4.11</td>
+<td align="center">4.60</td>
+<td align="center">4.42</td>
+</tr>
+</tbody>
+</table>
 
 ### Case Study
 
