@@ -195,50 +195,45 @@ For automatic evaluation, we follow the protocol described in our benchmark sett
 For Objective Quiz Evaluation, we construct five multiple-choice questions for each example based on the corresponding reference presentation video and user query. A representative example across the three presentation modes is shown below, where the correct options are highlighted in bold.
 
 <table>
-  <thead>
-    <tr>
-      <th>Mode and Question</th>
-      <th>Options</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <strong>Single Presentation</strong><br>
-        What is the main idea of flow matching in generative modeling?
-      </td>
-      <td>
-        A. Learning a fixed dataset classifier<br>
-        B. <strong>Matching a continuous transformation path</strong><br>
-        C. Compressing images into discrete tokens<br>
-        D. Training without any learned dynamics
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <strong>Discussion Presentation</strong><br>
-        What key contrast distinguishes diffusion models from flow matching?
-      </td>
-      <td>
-        A. <strong>Diffusion removes noise; flow matching learns a transformation path</strong><br>
-        B. Both methods only classify images<br>
-        C. Flow matching requires no training objective<br>
-        D. Diffusion models cannot generate samples
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <strong>Interaction Presentation</strong><br>
-        When an audience member asks why flow matching can be more efficient than diffusion models, what is the best answer?
-      </td>
-      <td>
-        A. Flow matching avoids modeling data transformations.<br>
-        B. Flow matching replaces generation with classification.<br>
-        C. <strong>Flow matching learns a continuous path and often needs fewer sampling steps.</strong><br>
-        D. Flow matching only works for Gaussian distributions.
-      </td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th align="left">Mode</th>
+<th align="left">Question</th>
+<th align="left">Options</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Single Presentation</strong></td>
+<td>What is the main idea of flow matching in generative modeling?</td>
+<td>
+A. Learning a fixed dataset classifier<br>
+B. <strong>Matching a continuous transformation path</strong><br>
+C. Compressing images into discrete tokens<br>
+D. Training without any learned dynamics
+</td>
+</tr>
+<tr>
+<td><strong>Discussion Presentation</strong></td>
+<td>What key contrast distinguishes diffusion models from flow matching?</td>
+<td>
+A. <strong>Diffusion removes noise; flow matching learns a transformation path</strong><br>
+B. Both methods only classify images<br>
+C. Flow matching requires no training objective<br>
+D. Diffusion models cannot generate samples
+</td>
+</tr>
+<tr>
+<td><strong>Interaction Presentation</strong></td>
+<td>When an audience member asks why flow matching can be more efficient than diffusion models, what is the best answer?</td>
+<td>
+A. Flow matching avoids modeling data transformations.<br>
+B. Flow matching replaces generation with classification.<br>
+C. <strong>Flow matching learns a continuous path and often needs fewer sampling steps.</strong><br>
+D. Flow matching only works for Gaussian distributions.
+</td>
+</tr>
+</tbody>
 </table>
 
 For Subjective Scoring, the mode-specific metrics are:
@@ -295,16 +290,22 @@ For Subjective Scoring, the mode-specific metrics are:
 </table>
 
 
-## Experiment
+## 🧪 Experiment
 
-### Comparative Study
+### ✳️ Comparative Study
 
-| Method | Model | Quiz Accuracy | Video Score (mean) | Search Score (mean) |
-| :----: | :---: | :-----------: | :----------------: | :-----------------: |
-| Human | Human | <PLACEHOLDER> | <PLACEHOLDER> | <PLACEHOLDER> |
-| PresentAgent-2 | <MODEL_PLACEHOLDER> | <PLACEHOLDER> | <PLACEHOLDER> | <PLACEHOLDER> |
-| PresentAgent-2 | <MODEL_PLACEHOLDER> | <PLACEHOLDER> | <PLACEHOLDER> | <PLACEHOLDER> |
+We evaluate PresentAgent-2 under the query-to-presentation video generation setting, focusing on its ability to support three presentation modes: **Single Presentation**, **Discussion Presentation**, and **Interaction Presentation**. We report both objective quiz scores and subjective mode-specific scores. Quiz is averaged on a **0–5** scale, and subjective metrics are scored on a **1–5** scale.
 
+| Method | Model | Single Quiz | Single Mean | Discussion Quiz | Discussion Mean | Interaction Quiz | Interaction Mean |
+| :----: | :---: | :---------: | :---------: | :-------------: | :-------------: | :--------------: | :--------------: |
+| Human Reference | Human-created | 4.82 | 4.46 | 4.83 | 4.40 | -- | -- |
+| PresentAgent-2 | Qwen3.5-VL-Plus | 4.84 | 4.47 | 4.85 | 4.37 | 4.85 | 4.52 |
+| PresentAgent-2 | Claude Opus 4.7 | 4.80 | 4.43 | 4.82 | 4.38 | 4.80 | 4.52 |
+| PresentAgent-2 | Gemini 3.1 Pro | 4.78 | 4.35 | 4.80 | 4.25 | 4.75 | 4.45 |
+| PresentAgent-2 | GPT-5.5 | 4.83 | 4.25 | 4.77 | 4.17 | 4.75 | 4.46 |
+| PresentAgent-2 | GLM-4.7V | 4.75 | 4.18 | 4.67 | 4.11 | 4.60 | 4.42 |
+
+The results show that PresentAgent-2 consistently achieves strong objective quiz performance across all three presentation modes while maintaining high subjective quality in explanation, discussion, and interaction.
 
 ### Case Study
 
