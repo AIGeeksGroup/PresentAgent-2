@@ -293,18 +293,17 @@ For Subjective Scoring, the mode-specific metrics are:
 ## 🧪 Experiment
 
 ### ✳️ Comparative Study
-
 <table>
 <thead>
 <tr>
 <th nowrap>Method</th>
 <th nowrap>Model</th>
-<th nowrap>S-Quiz</th>
-<th nowrap>S-Mean</th>
-<th nowrap>D-Quiz</th>
-<th nowrap>D-Mean</th>
-<th nowrap>I-Quiz</th>
-<th nowrap>I-Mean</th>
+<th nowrap>Single Quiz</th>
+<th nowrap>Single Mean</th>
+<th nowrap>Discussion Quiz</th>
+<th nowrap>Discussion Mean</th>
+<th nowrap>Interaction Quiz</th>
+<th nowrap>Interaction Mean</th>
 </tr>
 </thead>
 <tbody>
