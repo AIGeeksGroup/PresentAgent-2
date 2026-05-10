@@ -305,6 +305,33 @@ For Subjective Scoring, the mode-specific metrics are:
 
 ### Case Study
 
-<CASE_STUDY_VIDEO_TABLE_PLACEHOLDER>
+<table width="1560">
+  <tr>
+    <td width="520" align="center" valign="top">
+      <video
+        src="https://github.com/user-attachments/assets/2ef2959f-bbbf-4f39-86f3-654e9b252224"
+        width="500"
+        height="281"
+        controls>
+      </video>
+    </td>
+    <td width="520" align="center" valign="top">
+      <video
+        src="https://github.com/user-attachments/assets/471b6790-cfc6-459f-927b-4d56a5a403db"
+        width="500"
+        height="281"
+        controls>
+      </video>
+    </td>
+    <td width="520" align="center" valign="top">
+      <video
+        src="https://github.com/user-attachments/assets/3197f2b9-68ba-4a3a-9a29-458a78401f30"
+        width="500"
+        height="281"
+        controls>
+      </video>
+    </td>
+  </tr>
+</table>
 
 ---
