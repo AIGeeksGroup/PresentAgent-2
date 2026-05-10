@@ -32,12 +32,6 @@ If you use any content of this repo for your work, please cite the following pap
 
 ## News
 
-<b>2026/XX/XX:</b> [News Placeholder]
-
-<b>2026/XX/XX:</b> [News Placeholder]
-
-<b>2026/XX/XX:</b> [News Placeholder]
-
 
 ## Todo List
 
@@ -52,7 +46,7 @@ If you use any content of this repo for your work, please cite the following pap
 
 ## Introduction
 
-We present PresentAgent-2, a multimodal agent that transforms an open-ended user query into a final narrated presentation video. Compared with document-only presentation generation systems, PresentAgent-2 explicitly introduces a deep research stage that searches the web, monitors live research reports, and selects the most presentation-ready HTML sources before constructing presentation content. The system then converts the selected source into a structured intermediate document, generates presentation slides in one of three modes, and finally renders a presentation video with synchronized narration and dynamic media. The three supported modes are **single presentation**, **discussion**, and **interaction**, enabling PresentAgent-2 to produce different styles of presentation output from the same underlying researched content. This repository contains the code for the full pipeline, including query-to-source construction, source-to-document conversion, document-to-PPT generation, and PPT-to-video rendering.
+We present PresentAgent-2, an agentic framework that transforms open-ended user queries into narrated presentation videos. Unlike prior document-to-presentation systems that assume a complete source document as input, PresentAgent-2 begins from a short natural-language query and actively determines what should be explained, retrieves reliable textual and multimodal resources, and constructs a coherent presentation-style video. To achieve this, PresentAgent-2 employs a modular pipeline that first refines the query into a focused topic, conducts deep research over candidate sources, extracts multimodal materials including text, images, GIFs, and videos, and then plans the presentation structure, generates slides and scripts, synthesizes narration, and composes the final video with aligned audio-visual content. Importantly, dynamic media such as GIFs and videos are preserved during composition rather than converted into static screenshots, enabling richer and more expressive presentation pages. PresentAgent-2 further supports three complementary delivery modes within a unified framework: single-speaker presentation, multi-speaker discussion, and grounded interactive Q&A. To evaluate this new query-to-presentation video setting, we build a multimodal presentation benchmark covering single presentation, discussion, and interaction scenarios, assessing general presentation quality, multimodal media use, discussion effectiveness, and interaction grounding. These contributions demonstrate the potential of query-driven multimodal agents to transform brief user intents into structured, dynamic, and audience-oriented presentation videos.
 
 ![image](<METHOD_FIGURE_PLACEHOLDER>)
 
