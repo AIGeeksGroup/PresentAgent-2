@@ -220,7 +220,6 @@ For objective evaluation, we construct five multiple-choice questions for each e
       <td>Video Delivery Quality</td>
       <td>Delivers coherent content through slides, narration, and visuals.</td>
     </tr>
-
     <tr>
       <td rowspan="3"><strong>Discussion<br>Presentation</strong></td>
       <td>Discussion Effectiveness</td>
