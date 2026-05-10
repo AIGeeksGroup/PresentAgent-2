@@ -65,7 +65,7 @@ cd presentagent/MegaTTS3
 
 **Model Download**
 
-The pretrained TTS checkpoints can be found at [Hugging Face Placeholder](<MEGATTS3_HF_PLACEHOLDER>) or [Google Drive Placeholder](<MEGATTS3_GDRIVE_PLACEHOLDER>). Please download them and put them under:
+The pretrained TTS checkpoints can be found at [Hugging Face](https://huggingface.co/ByteDance/MegaTTS3/tree/main). Please download them and put them under:
 
 ``presentagent/MegaTTS3/checkpoints/xxx``
 
