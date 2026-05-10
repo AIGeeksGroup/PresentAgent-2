@@ -198,17 +198,57 @@ For objective evaluation, we construct five multiple-choice questions for each e
 - Content Comprehensibility
 - Interaction Helpfulness
 
-| Mode                     | Metric                       | Criterion                                                                           |
-| ------------------------ | ---------------------------- | ----------------------------------------------------------------------------------- |
-| Single Presentation      | Query Answering              | Directly answers the query and covers key topic concepts.                           |
-| Single Presentation      | Deep Research Effectiveness  | Uses relevant textual and multimodal resources to support the explanation.          |
-| Single Presentation      | Video Delivery Quality       | Delivers coherent content through slides, narration, and visuals.                   |
-| Discussion Presentation  | Discussion Effectiveness     | Uses dialogue to clarify, compare, and extend the presented ideas.                  |
-| Discussion Presentation  | Speaker Role Complementarity | Maintains complementary speaker roles for questioning, explaining, and summarizing. |
-| Discussion Presentation  | Conversational Delivery      | Provides natural, coherent, and easy-to-follow conversation.                        |
-| Interaction Presentation | Answer Effectiveness         | Answers audience questions correctly and directly.                                  |
-| Interaction Presentation | Content Comprehensibility    | Provides clear, understandable, and unambiguous answers.                            |
-| Interaction Presentation | Interaction Helpfulness      | Offers useful clarification that supports audience understanding.                   |
+<table>
+  <thead>
+    <tr>
+      <th>Mode</th>
+      <th>Metric</th>
+      <th>Criterion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3"><strong>Single<br>Presentation</strong></td>
+      <td>Query Answering</td>
+      <td>Directly answers the query and covers key topic concepts.</td>
+    </tr>
+    <tr>
+      <td>Deep Research Effectiveness</td>
+      <td>Uses relevant textual and multimodal resources to support the explanation.</td>
+    </tr>
+    <tr>
+      <td>Video Delivery Quality</td>
+      <td>Delivers coherent content through slides, narration, and visuals.</td>
+    </tr>
+
+    <tr>
+      <td rowspan="3"><strong>Discussion<br>Presentation</strong></td>
+      <td>Discussion Effectiveness</td>
+      <td>Uses dialogue to clarify, compare, and extend the presented ideas.</td>
+    </tr>
+    <tr>
+      <td>Speaker Role Complementarity</td>
+      <td>Maintains complementary speaker roles for questioning, explaining, and summarizing.</td>
+    </tr>
+    <tr>
+      <td>Conversational Delivery</td>
+      <td>Provides natural, coherent, and easy-to-follow conversation.</td>
+    </tr>
+    <tr>
+      <td rowspan="3"><strong>Interaction<br>Presentation</strong></td>
+      <td>Answer Effectiveness</td>
+      <td>Answers audience questions correctly and directly.</td>
+    </tr>
+    <tr>
+      <td>Content Comprehensibility</td>
+      <td>Provides clear, understandable, and unambiguous answers.</td>
+    </tr>
+    <tr>
+      <td>Interaction Helpfulness</td>
+      <td>Offers useful clarification that supports audience understanding.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Experiment
 
