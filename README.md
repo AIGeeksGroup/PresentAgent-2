@@ -180,13 +180,11 @@ To support the evaluation of query-driven presentation generation, we curate a b
 
 It emphasizes source discovery, multimodal content grounding, presentation quality, and final video delivery.
 
-![image](<BENCHMARK_FIGURE_PLACEHOLDER>)
-
 ### PresentEval-2
 
 To assess the quality of generated presentation videos, we adopt two complementary evaluation strategies: **Objective Quiz Evaluation** and **Subjective Scoring**.
 
-![image](<EVAL_FIGURE_PLACEHOLDER>)
+![image](https://github.com/AIGeeksGroup/PresentAgent-2/blob/main/presentagent/evaluation_pipeline.jpg)
 
 For objective evaluation, we construct five multiple-choice questions for each example to test whether the generated presentation truly conveys the expected key knowledge. For subjective evaluation, we score the outputs along dimensions such as:
 
