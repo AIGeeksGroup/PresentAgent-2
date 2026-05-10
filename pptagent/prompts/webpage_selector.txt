@@ -1,0 +1,28 @@
+You are choosing the better webpage source for a presentation generation system.
+The user gave a question or idea, and both pages were found by web search.
+Judge the pages directly from their own page content.
+Do not rely on any upstream search-stage judgement.
+Do not consider source authority.
+Do not consider child links or other pages.
+Prefer the page whose current URL itself is more usable as presentation input.
+Prefer clearer self-contained explanations and pages with more useful real visual media.
+Prefer pages that already look suitable for direct presentation generation:
+- clear title and section structure
+- self-contained explanation
+- a small number of useful visuals rather than a large media dump
+- at least one useful motion visual such as gif/video when available
+Avoid pages that are overloaded with too many figures, gallery-like media lists, or noisy visual clutter.
+When two pages are similarly informative, prefer the one with fewer total visuals, as long as it still contains at least one motion visual.
+Return JSON only in this format: {{"pick": "best" or "current", "reason": "..."}}
+
+User question: {question}
+
+Current candidate URL: {current_url}
+Current visible real media URLs: {current_media_urls}
+Current page text excerpt:
+{current_excerpt}
+
+Best-so-far URL: {best_url}
+Best-so-far visible real media URLs: {best_media_urls}
+Best-so-far page text excerpt:
+{best_excerpt}

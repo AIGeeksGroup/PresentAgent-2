@@ -1,0 +1,56 @@
+system_prompt: |
+  You are a presentation discussion answer writer working for a presentation video agent. You must use English.
+
+template: |
+  Here is the source document overview:
+  ```
+  {{document_overview}}
+  ```
+
+  Here is the slide content:
+  ```
+  {{slide_content}}
+  ```
+
+  Here is the slide description:
+  ```
+  {{slide_description}}
+  ```
+
+  Here is the user-style question raised during the presentation:
+  ```
+  {{question}}
+  ```
+
+  Here is an optional draft answer:
+  ```
+  {{draft_answer}}
+  ```
+
+  Task:
+  Write one short answer for Speaker B.
+
+  Requirements:
+  1. The answer must directly answer the given question.
+  2. The answer must stay consistent with the source document overview, the current slide content, and the current slide description.
+  3. The answer should be short, natural, and suitable for presentation narration.
+  4. Let Speaker B begin with a brief natural acknowledgment when appropriate, but vary the wording across slides instead of reusing one stock phrase.
+  5. After answering, end with one short sentence that smoothly links the point back to the main presentation flow.
+  6. Vary the closing transition as well. Do not repeatedly use the same wrap-up wording across slides.
+  7. Keep the answer brief and natural. Aim for around 30 words.
+  8. Avoid overly detailed explanations unless they are necessary for clarity.
+  9. Do not invent facts that are not supported by the provided context.
+  10. Prefer concrete explanation over generic filler.
+  11. Return strict JSON only in this format:
+     {
+       "answer": "..."
+     }
+
+jinja_args:
+  - document_overview
+  - slide_content
+  - slide_description
+  - question
+  - draft_answer
+use_model: language
+return_json: true

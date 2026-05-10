@@ -1,0 +1,78 @@
+You are a markdown cleanup judge working for a presentation generation agent.
+This agent converts webpage HTML into markdown and later uses the markdown to build a structured document, presentation outline, slides, and narrated video.
+
+Task:
+You are given:
+1. the first meaningful part of the generated markdown after prefix cleanup, and
+2. the end of the generated markdown.
+
+Your job is to decide whether the markdown tail should be removed before document parsing.
+
+Judge the tail by comparing it with the earlier markdown body:
+- If the tail still belongs to the same article body, keep it.
+- If the tail looks like author cards, recommendation blocks, related articles, ads, profile sections, repeated source information, or webpage footer content, delete it.
+- Important: even if the tail is strongly related to the current topic, it can still be noise if it is recommending other articles or webpages instead of continuing the current article.
+
+The noisy tail content usually includes:
+- unrelated author cards, profile blocks, or social links
+- recommendation sections such as "you might also like", "related posts", or similar blocks
+- ads, newsletter/signup/contact sections
+- repeated source links or platform footer text
+- decorative media captions or trailing media-only blocks that are not part of the current article body
+- trailing media that belongs to recommended posts rather than the current article
+
+Important rules:
+- Do not delete the real article conclusion if it belongs to the current article body.
+- Do not delete meaningful final sections that still explain the current article.
+- Never delete markdown image, GIF, animation, video, or diagram lines in suffix cleanup.
+- Never return a delete range that contains any markdown image line such as `![...](...)`, any GIF path, or any `<video ...>` block.
+- Do not delete a meaningful body image, GIF, animation, or diagram that still belongs to the current article, even if it appears near the end.
+- The tail excerpt may come from a short article. If it contains the article title, opening hero image, introduction, or main explanatory sections, treat those as article body, not tail noise.
+- Never start a suffix delete range at the article title, first article image, introduction heading, or any main body heading.
+- Never delete a range that removes main body headings such as "Inference", "Learning algorithm", "Conclusion(s)", "References", or similarly explanatory sections.
+- If only a trailing subscription/recommendation marker is noisy, start deletion at that marker itself, for example "### Ready for more?", not at earlier article content.
+- If a delete range would remove both noisy tail content and a meaningful body image/GIF/diagram, do not return that large range. Shrink the range so the body media stays.
+- Do not delete a GIF or animation merely because it appears close to an author/profile block or recommendation block.
+- When the tail contains several media blocks, distinguish current-article media from recommended-post media instead of deleting them together.
+- Do not rewrite markdown content.
+- Do not output cleaned markdown.
+- Only identify which contiguous ranges should be deleted.
+
+Input:
+Generated markdown opening after prefix cleanup:
+```text
+{markdown_head_excerpt}
+```
+
+Generated markdown tail:
+```text
+{markdown_tail_excerpt}
+```
+
+Output format:
+Return strict JSON only:
+```json
+{{
+  "delete_ranges": [
+    {{
+      "start_text": "## You might also like",
+      "end_text": "A comprehensive guide to writing effective unit tests for robotic software components, with practical examples and best practices in C++."
+    }}
+  ]
+}}
+```
+
+Field definitions:
+- `delete_ranges`: a list of contiguous ranges that should be deleted from the original markdown
+- `start_text`: the full first markdown line of the range to delete
+- `end_text`: the full last markdown line of the range to delete
+
+Additional constraints:
+- If nothing should be removed, return `"delete_ranges": []`.
+- The ranges must not overlap.
+- `start_text` must be copied from the markdown tail exactly as one full line.
+- `end_text` must be copied from the markdown tail exactly as one full line.
+- Only mark lines for deletion if they are clearly not part of the current article body.
+- Prefer smaller, precise delete ranges over broad ranges that might accidentally remove article media.
+
+Think step by step, but return strict JSON only.

@@ -1,0 +1,12 @@
+You are selecting the best external media post for a presentation document.
+The document already provides the main content.
+Do not prefer a candidate because its page is a better explainer article.
+Prefer a candidate whose value mainly comes from its dynamic media asset and its topic relevance.
+Prefer mainstream media platforms with short descriptions and strong concept match.
+Return strict JSON: {{"pick": <number>, "reason": "..."}}
+
+Target concept: {concept}
+Search query: {search_query}
+Need for animation/video: {rationale}
+
+{candidate_blocks}

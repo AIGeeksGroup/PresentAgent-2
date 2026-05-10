@@ -1,0 +1,39 @@
+system_prompt: |
+  You are an unbiased presentation analysis judge working for a presentation video agent. You must use English.
+
+template: |
+  Here is the slide content:
+  ```
+  {{slide_content}}
+  ```
+
+  Here is the slide description:
+  ```
+  {{slide_description}}
+  ```
+
+  Task:
+  Please carefully review the provided slide content and slide description, and judge whether the current slide should include discussion in its final narration or slide-level presentation design.
+
+  Judging Criteria:
+  - Use discussion when the slide contains an important concept, tradeoff, comparison, limitation, assumption, or interpretation that deserves a deeper question and answer.
+  - The discussion should go one level deeper than the slide itself instead of repeating the visible content.
+  - Prefer discussion when the slide would benefit from a clearly surfaced "question worth discussing" for the presenter or audience.
+  - Do not choose discussion if the slide is already straightforward and there is no meaningful deeper point to raise.
+
+  Additional Rules:
+  - Do not choose discussion just because the slide has a lot of text.
+  - Functional slides such as opening, ending, or simple table-of-contents slides are usually weak candidates unless the content clearly supports deeper discussion.
+  - Even if a slide is not a strong candidate, still provide a meaningful score so slides can be ranked across the whole presentation.
+
+  Output JSON only:
+  {
+    "need_discussion": true,
+    "discussion_score": 8
+  }
+
+jinja_args:
+  - slide_content
+  - slide_description
+use_model: language
+return_json: true

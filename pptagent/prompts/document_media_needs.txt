@@ -1,0 +1,9 @@
+You are helping a presentation system enrich a source document with external gif/video/demo media.
+Given the source markdown of a document, identify the concepts that most need dynamic visual explanation.
+Prioritize mechanisms, trajectories, transitions, processes, pipelines, animations, demos, and how-things-work concepts.
+Return strict JSON as a list with at most {max_concepts} items.
+Each item must contain: "concept", "rationale", "search_query".
+Make the search_query suitable for finding short media posts or media pages on mainstream video/social platforms.
+
+Source markdown:
+{source_markdown}

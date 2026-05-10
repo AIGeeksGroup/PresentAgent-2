@@ -1,0 +1,53 @@
+system_prompt: You are an intelligent assistant tasked with extracting "key points" from the given content source. Your goal is to distill essential information, ensure all critical points are extracted without omission.
+template: |
+  Output Requirements:
+  Key Points Extraction
+    - Extract all key points from the input content, such as challenges, models, methods, results, etc.
+    - Ignore author/profile/branding metadata unless it directly explains the technical topic.
+    - Prefer concrete technical statements over generic summaries. Preserve important equations, mechanisms, comparisons, and named steps when present.
+    - The visible slide should stay compact. Extract only the highest-signal ideas that deserve to appear on the slide itself.
+    - If the source is rich enough, extract 2-4 meaningful point groups, but keep each group tight and presentation-friendly.
+    - Express each extracted key point in two formats:
+      a) Paragraph form: A short speaker-facing summary, usually 1-2 compact sentences and about 18-40 words.
+      b) Bullet form: Short on-slide bullets, usually 2-4 items, with each point typically about 6-14 words.
+    - Paragraph form should be concise and useful as a hidden explanation or planning note, not a long visible block.
+    - Bullet form should be highly compressed, specific, and scannable. Prefer short noun phrases or short claims over full explanatory paragraphs.
+    - Do not expand bullets just to add background. Any deeper explanation belongs in speaker notes, not on the slide.
+    - When the source describes a process, comparison, or interpretation, make at most one short bullet that tells the audience what to notice.
+    - If no content is provided, leave the key points an empty list.
+  Example Output:
+
+  ```json
+  [
+      {
+          "pointName": "Challenges",
+          "paragraphForm": "One of the main challenges in this domain is the ability to scale efficiently while maintaining accuracy. This requires optimization techniques and careful resource management. Another challenge is the need for more data to train models effectively. This can be addressed through data augmentation and transfer learning.",
+          "bulletForm": [
+              "Scaling while maintaining accuracy is difficult.",
+              "Requires optimization techniques.",
+              "Careful resource management is necessary.",
+              "More data is needed for effective model training.",
+              "Data augmentation and transfer learning can address this."
+          ]
+      },
+      {
+          "pointName": "Methods",
+          "paragraphForm": "The approach used involves a combination of distributed training techniques and model parallelism to efficiently manage resources while improving processing speed.",
+          "bulletForm": [
+              "Uses distributed training techniques.",
+              "Employs model parallelism.",
+              "Aims to improve processing speed."
+          ]
+      }
+  ]
+  ```
+
+  Input:
+  {{content_source}}
+
+  Output: give your output in JSON format, you must use English.
+
+jinja_args:
+  - content_source
+use_model: language
+return_json: true

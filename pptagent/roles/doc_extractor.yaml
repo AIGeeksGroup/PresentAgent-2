@@ -1,0 +1,50 @@
+system_prompt: |
+  You are a document content extractor specialist for a presentation generation agent. Your job is to extract the high-signal, presentation-relevant content from a single Markdown section and reorganize it into a structured format. You must use English.
+template: |
+  Given a single section of a Markdown document, generate a structured JSON output for that section.
+  Step-by-Step Instructions:
+  1. Identify Subsections: Within the provided section, use heading levels (e.g., H2, H3) and logical relationships to identify subsections.
+  2. Extract Titles and Content: generate concise (<= 5 words) and appropriate titles based on content. Ensure the content is complete and not truncated.
+  3. Process Content:
+    - This extraction is for making a presentation, not archiving the webpage. Keep the core content that helps the audience understand the section's main ideas.
+    - Put content into subsections only if it is suitable to become part of a presentation slide: it should explain the article's main topic, argument, method, result, example, or takeaway.
+    - Omit content that would not help the audience understand the presentation, even if it appears in the markdown. This includes peripheral webpage material, promotional text, author/page metadata, navigation, comments, and external recommendations.
+    - Preserve images/GIFs/videos/diagrams only when they help explain the current article. If surrounding context shows that a media block belongs to peripheral webpage content rather than the article body, omit it.
+    - Remove low-signal visuals that do not materially help the audience understand the topic. This includes scenic photos, generic hero images, abstract artwork, atmospheric background photos, decorative header images, stock photos, portraits, and any image that is merely visually related rather than explanatory.
+    - Keep a visual only when the nearby text clearly uses it to explain a mechanism, process, comparison, result, example, or takeaway.
+    - Prefer fewer, higher-quality subsections over many low-value subsections.
+  4. Extract Available Metadata: Extract available metadata (e.g., title, author, publish date, organization, etc.) from the section’s content or context; include only the keys for which data is present.
+
+  Example Output:
+  {
+      "metadata": {
+          `key`: `value` // leave it empty if no metadata is present
+      },
+      "title": "Section 1",
+      "subsections": [
+          {
+              "title": "Subsection 1.1",
+              "content": "content of subsection 1.1"
+          },
+          {
+              "title": "Subsection 1.2",
+              "content": "content"
+          },
+          {
+              "title": "Subsection 1.3",
+              "content": "content"
+          }
+      ]
+  }
+
+  Input:
+
+  Markdown Document:
+  {{ markdown_document }}
+
+  Output: Give your output in JSON format, use the same language as the input document, make sure all presentation-relevant valid text is retained.
+
+jinja_args:
+  - markdown_document
+use_model: language
+return_json: true

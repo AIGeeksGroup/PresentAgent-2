@@ -1,0 +1,63 @@
+You are a strict slide media judge.
+
+Input:
+Presentation outline:
+```
+{presentation_outline}
+```
+
+Slide content:
+```
+{slide_content}
+```
+
+Slide description:
+```
+{slide_description}
+```
+
+Target media type:
+```
+{media_type}
+```
+
+Search query:
+```
+{search_query}
+```
+
+Candidate page URL:
+```
+{page_url}
+```
+
+Resolved media from this page:
+```
+{candidate_media}
+```
+
+Task:
+Return `is_good_media=true` only if the current page itself directly gives at least one downloadable media asset that is good for this slide.
+
+Strict rules:
+- Use one single decision rule. Do not use broad relevance or source-authority as a reason to approve.
+- The current page itself must directly provide the usable media. Reject pages that are mainly articles, blogs, research pages, paper pages, documentation pages, guide pages, or pages that only explain and do not directly provide the final usable asset.
+- The media must be directly downloadable or directly usable from the current page.
+- If `target media type` is `video`, approve only if at least one resolved media item is a downloadable motion asset and its `duration_seconds` is positive and no more than 10 seconds.
+- If `target media type` is `video`, reject if duration is missing, zero, negative, or greater than 10 seconds.
+- If `target media type` is `image`, approve only if at least one resolved media item is a directly downloadable image that clearly fits the slide.
+- Reject if the page only has text, only has static article content, only has thumbnails/placeholders, only links elsewhere, or only has weak incidental visuals.
+- Reject if none of the resolved media items is good enough for the current slide.
+- Prefer the simplest literal judgment: current page opens to usable downloadable media for this slide = true; otherwise = false.
+
+Return strict JSON only:
+{{
+  "is_good_media": true,
+  "rationale": "The current page directly provides a downloadable media asset for this slide, and the best video asset is no more than 10 seconds."
+}}
+
+Rejected example:
+{{
+  "is_good_media": false,
+  "rationale": "The current page does not directly provide a usable downloadable media asset for this slide, or the available video is longer than 10 seconds."
+}}

@@ -1,0 +1,84 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+.venv-presentagent/
+venv/
+env/
+
+# Secrets / local config
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Node / frontend caches
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build / runtime caches
+pptagent/runs/
+presentagent/.cache/
+**/llm_debug/
+**/*.log
+logs/
+
+# Large model weights / checkpoints
+presentagent/MegaTTS3/checkpoints/
+
+# Generated presentation/video artifacts
+**/notes_assets/
+**/single_presentation_video/
+**/discussion_video/
+**/interaction_video/
+**/output.mp4
+**/output.mov
+**/segment_*.mp4
+**/frame_*.jpg
+**/frame_*.wav
+**/*.tmp.mp4
+
+# Temporary bundles / archives
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Large local evaluation / benchmark outputs
+nips_evaluate/
+ai_paper_slop/
+paper_url_to_source_document_batch/
+discussion_turn_taking_clips/
+discussion_turn_taking_batch12/
+presentation_top20_ppts/
+presentation_top20_ppts_new/
+good_ppts_collected_20260504/
+
+# Local generated PresentAgent-2 case artifacts
+presentagent2_url_to_source/
+presentagent2_source_to_document/
+presentagent2_source_to_document_rerun/
+presentagent2_document_to_ppt/
+presentagent2_document_to_ppt_strict/
+presentagent2_document_to_ppt_strict_v2/
+presentagent2_document_to_ppt_strict_v3/

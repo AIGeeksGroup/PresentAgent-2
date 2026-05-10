@@ -1,0 +1,50 @@
+system_prompt: |
+  You are an intelligent assistant tasked with selecting the most suitable layout from a set of predefined options based on the provided slide information and providing detailed reasoning. You must use English.
+template: |
+  Input Information:
+  Source Content: The text for the current slide (may be empty).
+  Image Information: Images or videos and their captions.
+  Outline and Description: The overall structure of the presentation and the goal of the current slide.
+  Layout Options: Including name (e.g., "Opening"), elements with its type (image or text), length, and suggested characters (if text element).
+
+  Task Requirements:
+  - Select the best layout based on the text, images, outline, and description.
+  - Consider the following factors:
+    Content Fit: Evaluate whether the layout's number of elements matches the input, whether the text length and element length are appropriate, and whether the layout name aligns with the theme.
+    Visual Fit: Assess the relevance of the provided visual media to the theme and their enhancement to the content; if a diagram, comparison figure, result graphic, or animation directly explains the slide, strongly prioritize layouts with visual slots. If relevance is low or the visual is decorative, a text-only layout may be chosen.
+    Strict Relevance: Only treat a visual as usable if it is strictly aligned with the current slide description. If the slide asks for a single-mode demo, discussion-mode demo, or interaction case, do not reuse a framework overview, benchmark figure, or a visual from a different mode as the main right-side visual.
+    Visual Size Fit: If the visual is a wide multi-panel diagram, workflow, timeline, comparison strip, or dense technical figure, choose a layout where the visual has a large readable area. Do not place such figures into tiny side panels, decorative legend slots, color-swatch panels, or narrow thumbnail areas.
+    Video Preference: If the provided materials include a video or GIF and the slide describes a process, temporal change, mechanism, animation, workflow, inference behavior, or operation demo, prefer a visual layout that can meaningfully showcase the video instead of reducing it to a text-only slide. Text-only should be a last resort in that case.
+    If an explanatory GIF/video is available and relevant, do not choose a layout that effectively hides it or discards it.
+    If the available visuals are weakly related, generic, or wrong-mode, prefer a text-only layout rather than forcing the slide to display a misleading visual.
+    If no visual media are provided, use the text-only layout.
+  - Output:
+    - Layout name.
+    - Detailed Reasoning: Analyze the fit between the layout and content (element count, text length, theme alignment) and the fit between images and content (relevance and enhancement), explaining why this layout was chosen and whether images are used.
+
+  Example Output:
+  {
+      "reasoning": "The current slide is Slide 2, themed \"team introduction,\" with the goal of showcasing team members and their backgrounds. The text (50 characters) is concise and close to the middle of the Image-Text layout's character range (30-100), making it suitable for summarizing team details. The provided team photo is highly relevant to the theme, offering a visual representation of the team that significantly enhances audience understanding and engagement, aligning with the rule to prioritize image-inclusive layouts when applicable. The Image-Text layout, with 1 image slot and 1 text slot, perfectly matches the input needs. In contrast, Opening:Text (100-300 characters) is better suited for a text-heavy opening slide, while Stage Analysis (2 images, 1 text) is excessive for a single image and short text, making Image-Text the optimal choice.",
+      "layout": "Image-Text"
+  }
+
+  Input:
+  Outline: {{ outline }}
+
+  Current Slide Description:
+  {{ slide_description }}
+
+  Slide Content Source:
+  {{ slide_content }}
+
+  Layout Options: {{ available_layouts }}
+
+  Output: give your anwser in json format
+
+jinja_args:
+  - outline
+  - slide_description
+  - slide_content
+  - available_layouts
+use_model: language
+return_json: true

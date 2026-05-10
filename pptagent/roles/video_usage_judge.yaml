@@ -1,0 +1,39 @@
+system_prompt: |
+  You are a slide media judge for presentation generation. Decide whether the current slide should actively use the provided video materials. You must use English.
+template: |
+  Input Information:
+  Presentation Outline:
+  {{ outline }}
+
+  Current Slide Description:
+  {{ slide_description }}
+
+  Slide Content Source:
+  {{ slide_content }}
+
+  Available Videos:
+  {{ videos }}
+
+  Task:
+  Decide whether the current slide should use video in the final slide design.
+
+  Decision Rules:
+  - Return `use_video: true` when the provided video materially improves how this slide explains its content.
+  - If the slide covers a process, temporal change, trajectory, mechanism, inference loop, training dynamics, or operation demo, and the video directly shows that motion, default to `use_video: true`.
+  - If the available video or GIF is the clearest way to understand the current slide, you must return `use_video: true`.
+  - Do not drop an explanatory GIF/video just because static text could summarize it. Keep it whenever the motion itself helps audience understanding.
+  - Return `use_video: false` only when the video is decorative, redundant, or does not add explanatory value beyond the text and static visuals.
+  - Judge based on the current slide only, not the whole presentation.
+  - Prefer a simple decision. Strongly bias toward keeping a relevant animation instead of dropping it.
+
+  Output:
+  {
+    "use_video": true
+  }
+jinja_args:
+  - outline
+  - slide_description
+  - slide_content
+  - videos
+use_model: language
+return_json: true
