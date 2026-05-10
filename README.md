@@ -1,4 +1,4 @@
-# <img src="https://github.com/AIGeeksGroup/PresentAgent-2/blob/main/presentagent/speaker_logo.png" alt="logo" width="50"/> PresentAgent-2: Multimodal Agent for Query-to-Presentation Video Generation
+# PresentAgent-2: Towards Generalist Multimodal Presentation Agents
 This is the code repository for the paper:
 > **PresentAgent-2: Multimodal Agent for Query-to-Presentation Video Generation**
 >
