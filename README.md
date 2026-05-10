@@ -22,11 +22,11 @@ This is the code repository for the paper:
 
 If you use any content of this repo for your work, please cite the following paper:
 ```
-@article{presentagent2_2026,
-  title={PresentAgent-2: Multimodal Agent for Query-to-Presentation Video Generation},
-  author={[Author Placeholder]},
-  journal={[Venue Placeholder]},
-  year={2026}
+@article{wu2025presentagent2,
+  title={PresentAgent-2: Towards Generalist Multimodal Presentation Agents},
+  author={Wu, Wei and Xu, Ziyang and Zhang, Zeyu and Zhao, Yang and Tang, Hao},
+  journal={Tech Report},
+  year={2026},
 }
 ```
 
