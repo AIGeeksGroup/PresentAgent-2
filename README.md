@@ -4,8 +4,6 @@ This is the code repository for the paper:
 >
 > Wei Wu\* , Ziyang Xu\* , Zeyu Zhang\*†, Yang Zhao, Hao Tang‡
 >
-> Peking University, La Trobe University
->
 > \*Equal contribution. †Project lead. ‡Corresponding author: bjdxtanghao@gmail.com.
 
 >
