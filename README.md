@@ -198,6 +198,18 @@ For objective evaluation, we construct five multiple-choice questions for each e
 - Content Comprehensibility
 - Interaction Helpfulness
 
+| Mode                     | Metric                       | Criterion                                                                           |
+| ------------------------ | ---------------------------- | ----------------------------------------------------------------------------------- |
+| Single Presentation      | Query Answering              | Directly answers the query and covers key topic concepts.                           |
+| Single Presentation      | Deep Research Effectiveness  | Uses relevant textual and multimodal resources to support the explanation.          |
+| Single Presentation      | Video Delivery Quality       | Delivers coherent content through slides, narration, and visuals.                   |
+| Discussion Presentation  | Discussion Effectiveness     | Uses dialogue to clarify, compare, and extend the presented ideas.                  |
+| Discussion Presentation  | Speaker Role Complementarity | Maintains complementary speaker roles for questioning, explaining, and summarizing. |
+| Discussion Presentation  | Conversational Delivery      | Provides natural, coherent, and easy-to-follow conversation.                        |
+| Interaction Presentation | Answer Effectiveness         | Answers audience questions correctly and directly.                                  |
+| Interaction Presentation | Content Comprehensibility    | Provides clear, understandable, and unambiguous answers.                            |
+| Interaction Presentation | Interaction Helpfulness      | Offers useful clarification that supports audience understanding.                   |
+
 ## Experiment
 
 ### Comparative Study
