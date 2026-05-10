@@ -294,8 +294,6 @@ For Subjective Scoring, the mode-specific metrics are:
 
 ### ✳️ Comparative Study
 
-We evaluate PresentAgent-2 under the query-to-presentation video generation setting, focusing on its ability to support three presentation modes: **Single Presentation**, **Discussion Presentation**, and **Interaction Presentation**. We report both objective quiz scores and subjective mode-specific scores. Quiz is averaged on a **0–5** scale, and subjective metrics are scored on a **1–5** scale.
-
 | Method | Model | Single Quiz | Single Mean | Discussion Quiz | Discussion Mean | Interaction Quiz | Interaction Mean |
 | :----: | :---: | :---------: | :---------: | :-------------: | :-------------: | :--------------: | :--------------: |
 | Human Reference | Human-created | 4.82 | 4.46 | 4.83 | 4.40 | -- | -- |
@@ -304,8 +302,6 @@ We evaluate PresentAgent-2 under the query-to-presentation video generation sett
 | PresentAgent-2 | Gemini 3.1 Pro | 4.78 | 4.35 | 4.80 | 4.25 | 4.75 | 4.45 |
 | PresentAgent-2 | GPT-5.5 | 4.83 | 4.25 | 4.77 | 4.17 | 4.75 | 4.46 |
 | PresentAgent-2 | GLM-4.7V | 4.75 | 4.18 | 4.67 | 4.11 | 4.60 | 4.42 |
-
-The results show that PresentAgent-2 consistently achieves strong objective quiz performance across all three presentation modes while maintaining high subjective quality in explanation, discussion, and interaction.
 
 ### Case Study
 
