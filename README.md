@@ -208,7 +208,7 @@ For Objective Quiz Evaluation, we construct five multiple-choice questions for e
 <td>What is the main idea of flow matching in generative modeling?</td>
 <td>
 A. Learning a fixed dataset classifier<br>
-B. <strong>Matching a continuous transformation path</strong><br>
+<strong>B. Matching a continuous transformation path</strong><br>
 C. Compressing images into discrete tokens<br>
 D. Training without any learned dynamics
 </td>
@@ -217,7 +217,7 @@ D. Training without any learned dynamics
 <td><strong>Discussion Presentation</strong></td>
 <td>What key contrast distinguishes diffusion models from flow matching?</td>
 <td>
-A. <strong>Diffusion removes noise; flow matching learns a transformation path</strong><br>
+<strong>A. Diffusion removes noise; flow matching learns a transformation path</strong><br>
 B. Both methods only classify images<br>
 C. Flow matching requires no training objective<br>
 D. Diffusion models cannot generate samples
@@ -229,7 +229,7 @@ D. Diffusion models cannot generate samples
 <td>
 A. Flow matching avoids modeling data transformations.<br>
 B. Flow matching replaces generation with classification.<br>
-C. <strong>Flow matching learns a continuous path and often needs fewer sampling steps.</strong><br>
+<strong>C. Flow matching learns a continuous path and often needs fewer sampling steps.</strong><br>
 D. Flow matching only works for Gaussian distributions.
 </td>
 </tr>
