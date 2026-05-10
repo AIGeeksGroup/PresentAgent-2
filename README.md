@@ -1,4 +1,4 @@
-# <img src="https://github.com/AIGeeksGroup/PresentAgent-2/blob/main/presentagent/speaker_logo.png" alt="logo" width="50"/> PresentAgent-2
+#  PresentAgent-2
 
 PresentAgent-2 is a multimodal presentation agent for **query-to-presentation-video generation**.
 
