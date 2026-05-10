@@ -1,6 +1,6 @@
 # PresentAgent-2: Towards Generalist Multimodal Presentation Agents
 This is the code repository for the paper:
-> **PresentAgent-2: Multimodal Agent for Query-to-Presentation Video Generation**
+> **PresentAgent-2: Towards Generalist Multimodal Presentation Agents**
 >
 > Wei Wu\* , Ziyang Xu\* , Zeyu Zhang\*†, Yang Zhao, Hao Tang‡
 >
