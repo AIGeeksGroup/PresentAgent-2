@@ -186,17 +186,62 @@ To assess the quality of generated presentation videos, we adopt two complementa
 
 ![image](https://github.com/AIGeeksGroup/PresentAgent-2/blob/main/presentagent/evaluation_pipeline.jpg)
 
-For objective evaluation, we construct five multiple-choice questions for each example to test whether the generated presentation truly conveys the expected key knowledge. For subjective evaluation, we score the outputs along dimensions such as:
+For automatic evaluation, we follow the protocol described in our benchmark setting. Each generated video is evaluated from two perspectives: **objective knowledge delivery** and **subjective mode-specific quality**.
 
-- Query Answering
-- Deep Research Effectiveness
-- Video Delivery Quality
-- Discussion Effectiveness
-- Speaker Role Complementarity
-- Conversational Delivery Quality
-- Answer Effectiveness
-- Content Comprehensibility
-- Interaction Helpfulness
+- In **Objective Quiz Evaluation**, the VLM acts as an audience member and answers five multiple-choice questions by watching the generated video and using the transcript transcribed from the generated video’s audio, resulting in a quiz score from **0 to 5**.
+- In **Subjective Scoring**, the VLM judge assigns independent **1–5** scores to each generated result according to the three metrics defined for the corresponding presentation mode.
+- We report average quiz scores, the mean subjective score computed from the three mode-specific metrics, and the individual metric scores over examples for each mode and model.
+
+For Objective Quiz Evaluation, we construct five multiple-choice questions for each example based on the corresponding reference presentation video and user query. A representative example across the three presentation modes is shown below, where the correct options are highlighted in bold.
+
+<table>
+  <thead>
+    <tr>
+      <th>Mode and Question</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <strong>Single Presentation</strong><br>
+        What is the main idea of flow matching in generative modeling?
+      </td>
+      <td>
+        A. Learning a fixed dataset classifier<br>
+        B. <strong>Matching a continuous transformation path</strong><br>
+        C. Compressing images into discrete tokens<br>
+        D. Training without any learned dynamics
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Discussion Presentation</strong><br>
+        What key contrast distinguishes diffusion models from flow matching?
+      </td>
+      <td>
+        A. <strong>Diffusion removes noise; flow matching learns a transformation path</strong><br>
+        B. Both methods only classify images<br>
+        C. Flow matching requires no training objective<br>
+        D. Diffusion models cannot generate samples
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Interaction Presentation</strong><br>
+        When an audience member asks why flow matching can be more efficient than diffusion models, what is the best answer?
+      </td>
+      <td>
+        A. Flow matching avoids modeling data transformations.<br>
+        B. Flow matching replaces generation with classification.<br>
+        C. <strong>Flow matching learns a continuous path and often needs fewer sampling steps.</strong><br>
+        D. Flow matching only works for Gaussian distributions.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+For Subjective Scoring, the mode-specific metrics are:
 
 <table>
   <thead>
@@ -248,6 +293,7 @@ For objective evaluation, we construct five multiple-choice questions for each e
     </tr>
   </tbody>
 </table>
+
 
 ## Experiment
 
