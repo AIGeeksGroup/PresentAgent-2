@@ -52,18 +52,6 @@ We present PresentAgent-2, an agentic framework that transforms open-ended user 
 
 ---
 
-## YouTube Video
-
->[!NOTE]
-> If you'd like to learn more about our paper, please check out the following YouTube video.
-
-[![Watch the video](https://img.youtube.com/vi/<YOUTUBE_ID_PLACEHOLDER>/maxresdefault.jpg)](https://youtu.be/<YOUTUBE_ID_PLACEHOLDER>)
-
-## Promotion
-
-<PROMOTION_VIDEO_OR_LINK_PLACEHOLDER>
-
-
 ## Run Your PresentAgent-2
 
 ### 1. Install & Requirements
