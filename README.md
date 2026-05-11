@@ -168,6 +168,80 @@ output_root/
 └── pipeline_summary.json
 ```
 
+
+### 4. InteractionGUI
+
+PresentAgent-2 supports a third delivery mode — **interactive Q&A** — via the `InteractionGUI` module. Given a generated presentation video and its accompanying document, audiences can ask natural-language questions and receive **text + synthesized speech** answers, while the video automatically seeks to the relevant section.
+
+#### Setup
+
+**Install backend dependencies**
+
+```bash
+cd presentagent/InteractionGUI
+pip install -r requirements.txt
+```
+
+**Configure environment variables**
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env`:
+
+```env
+# LLM API configuration (OpenAI-compatible)
+ANTHROPIC_AUTH_TOKEN=your_api_key_here
+ANTHROPIC_PROVIDER=your_provider_here
+ANTHROPIC_BASE_URL=https://api.example.com/v1
+ANTHROPIC_MODEL=your_model_name
+ANTHROPIC_TEMPERATURE=0.7
+
+# Knowledge base — document used by the agent to answer questions
+SOURCE_MD_PATH=./source/xxx/source.md
+
+# Audio output directory
+TTS_OUTPUT_DIR=./tts_output
+```
+
+
+**Install frontend dependencies**
+
+```bash
+cd presentagent/InteractionGUI/frontend
+npm install
+```
+
+#### Running
+
+**Backend (FastAPI)**
+
+```bash
+cd presentagent/InteractionGUI
+python main_api.py
+```
+
+
+**Frontend (Next.js)**
+
+```bash
+cd presentagent/InteractionGUI/frontend
+npm run dev
+```
+
+
+#### Usage
+
+![InteractionGUI](presentagent/InteractionGUI/InteractionGUI.png)
+
+1. **Input topic & generate video** — enter a topic to generate a presentation video (single or discussion mode) via the pipeline
+2. **Select a video** — click "Select video" to load the generated `.mp4/.webm/.mov` file
+3. **Upload a document** — click "Select document" to upload the corresponding `.md`, `.txt`, or `.json` knowledge-base file
+4. **Ask questions** — type in the Q&A panel; the agent replies with text + synthesized audio, and the video seeks to the relevant section
+5. **Play audio** — click the floating audio player to hear the AI's spoken answer
+
+
 ## Presentation Benchmark
 
 ### Query-to-Presentation Benchmark
