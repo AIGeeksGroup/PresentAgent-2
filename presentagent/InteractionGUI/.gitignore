@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# virtual environments
+.venv/
+venv/
+ENV/
+
+# env files (do NOT commit secrets)
+.env
+.env.local
+.env.*.local
+
+# generated runtime directories
+tts_output/
+.cache/
+uploads/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# uv lock (optional)
+uv.lock

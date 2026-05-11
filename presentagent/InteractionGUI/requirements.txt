@@ -1,0 +1,28 @@
+# PresentAgent-2 Dependencies
+
+# AutoGen ag2 — the core agent framework
+ag2>=0.12.0
+
+# OpenAI SDK (DashScope qwen3.5-omni uses OpenAI-compatible API)
+openai>=1.12.0
+
+# Tokenizer for token counting
+tiktoken>=0.7.0
+
+# FastAPI web framework
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.9
+
+# SSE streaming support
+sse-starlette>=2.0.0
+
+# Sentence embedding for video position localization
+sentence-transformers>=2.2.0
+numpy>=1.24.0
+
+# WebSocket support
+websockets>=12.0
+
+# Pydantic for data validation
+pydantic>=2.0.0
