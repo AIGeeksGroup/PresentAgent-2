@@ -175,14 +175,14 @@ PresentAgent-2 supports a third delivery mode — **interactive Q&A** — via th
 
 #### Setup
 
-**Install backend dependencies**
+Install backend dependencies
 
 ```bash
 cd presentagent/InteractionGUI
 pip install -r requirements.txt
 ```
 
-**Configure environment variables**
+Configure environment variables
 
 ```bash
 cp .env.example .env
@@ -206,7 +206,7 @@ TTS_OUTPUT_DIR=./tts_output
 ```
 
 
-**Install frontend dependencies**
+Install frontend dependencies
 
 ```bash
 cd presentagent/InteractionGUI/frontend
@@ -215,7 +215,7 @@ npm install
 
 #### Running
 
-**Backend (FastAPI)**
+Backend (FastAPI)
 
 ```bash
 cd presentagent/InteractionGUI
@@ -223,7 +223,7 @@ python main_api.py
 ```
 
 
-**Frontend (Next.js)**
+Frontend (Next.js)
 
 ```bash
 cd presentagent/InteractionGUI/frontend
