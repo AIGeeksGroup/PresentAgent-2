@@ -2,12 +2,12 @@
 This is the code repository for the paper:
 > **PresentAgent-2: Towards Generalist Multimodal Presentation Agents**
 >
-> Wei Wu\* , Ziyang Xu\* , Zeyu Zhang\*†, Yang Zhao, Hao Tang‡
+> Wei Wu\*, Ziyang Xu\*, [Zeyu Zhang](https://steve-zeyu-zhang.github.io/)\*†, Yang Zhao, Hao Tang‡
 >
 > \*Equal contribution. †Project lead. ‡Corresponding author.
 
 >
-> ### [Paper](<PAPER_URL_PLACEHOLDER>) | [Project Page](https://aigeeksgroup.github.io/PresentAgent-2/) | [Demo](<DEMO_VIDEO_URL_PLACEHOLDER>) | [Data](<https://huggingface.co/datasets/AIGeeksGroup/PresentEval>)
+> ### [Paper](<PAPER_URL_PLACEHOLDER>) | [Website](https://aigeeksgroup.github.io/PresentAgent-2/) | [PresentEval](<https://huggingface.co/datasets/AIGeeksGroup/PresentEval>)
 
 <!--
 [Papers With Code](<PWC_URL_PLACEHOLDER>)
