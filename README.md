@@ -7,7 +7,7 @@ This is the code repository for the paper:
 > \*Equal contribution. †Project lead. ‡Corresponding author.
 
 >
-> ### [Paper](<PAPER_URL_PLACEHOLDER>) | [Website](https://aigeeksgroup.github.io/PresentAgent-2/) | [PresentEval](<https://huggingface.co/datasets/AIGeeksGroup/PresentEval>)
+> ### [Paper](https://arxiv.org/abs/2605.11363) | [Website](https://aigeeksgroup.github.io/PresentAgent-2/) | [PresentEval](<https://huggingface.co/datasets/AIGeeksGroup/PresentEval>)
 
 <!--
 [Papers With Code](<PWC_URL_PLACEHOLDER>)
@@ -22,11 +22,11 @@ https://github.com/user-attachments/assets/2d780896-ffac-4f13-a928-0e6b313b2717
 
 If you use any content of this repo for your work, please cite the following paper:
 ```
-@article{wu2025presentagent2,
+@article{wu2026presentagent2,
   title={PresentAgent-2: Towards Generalist Multimodal Presentation Agents},
   author={Wu, Wei and Xu, Ziyang and Zhang, Zeyu and Zhao, Yang and Tang, Hao},
-  journal={Tech Report},
-  year={2026},
+  journal={arXiv preprint arXiv:2605.11363},
+  year={2026}
 }
 ```
 
