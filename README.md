@@ -7,7 +7,7 @@ This is the code repository for the paper:
 > \*Equal contribution. †Project lead. ‡Corresponding author.
 
 >
-> ### [Paper](https://arxiv.org/abs/2605.11363) | [Website](https://aigeeksgroup.github.io/PresentAgent-2/) | [PresentEval](<https://huggingface.co/datasets/AIGeeksGroup/PresentEval>)
+> ### [Paper](https://arxiv.org/abs/2605.11363) | [Website](https://aigeeksgroup.github.io/PresentAgent-2/) | [PresentEval](https://huggingface.co/datasets/AIGeeksGroup/PresentEval) | [HF Paper](https://huggingface.co/papers/2605.11363)
 
 <!--
 [Papers With Code](<PWC_URL_PLACEHOLDER>)
