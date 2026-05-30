@@ -1,12 +1,12 @@
 """
-PresentAgent — Interactive Q&A with context from source.md.
+PresentAgent — Interactive Q&A with context from input.
 
 Architecture: Single ConversableAgent (AutoGen ag2 0.12+) with
-auto-summarizing conversation memory and source.md knowledge base.
+auto-summarizing conversation memory and input knowledge base.
 
 Core flow:
     User input
-      -> build context (memory summary + source.md + current question)
+      -> build context (memory summary + input + current question)
       -> _call_llm_direct()  [DashScope qwen3.5-omni-flash, text + audio]
       -> ConversationMemory.add_round()
       -> auto-summarization if round_threshold exceeded
