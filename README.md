@@ -113,10 +113,10 @@ The main public entrypoint in this repository is:
 ```bash
 scripts/run_url_to_video_pipeline.py
 ```
-
+ 
 This script supports both:
 
-- `query -> DeepResearch -> top-3 HTML selection -> source.md -> refined_doc.json -> pptx -> video`
+- `query -> DeepResearch -> top-3 HTML selection -> url -> source.md -> refined_doc.json -> pptx -> video`
 - `url -> source.md -> refined_doc.json -> pptx -> video`
 
 #### Query to Video
